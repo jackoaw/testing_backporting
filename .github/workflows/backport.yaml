@@ -20,5 +20,5 @@ jobs:
           github_token: ${{ secrets.GH_TOKEN }}
           copy_requested_reviewers: true
           experimental: 
-            conflict_resolution: draft_commit_conflicts
+            experimental: '{"conflict_resolution": "draft_commit_conflicts"}'
 
