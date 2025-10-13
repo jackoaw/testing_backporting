@@ -1,7 +1,7 @@
 name: Backport merged pull request
 on:
   pull_request_target:
-    types: [closed]
+    types: [closed, labeled]
 permissions:
   contents: write # so it can comment
   pull-requests: write # so it can create pull requests
@@ -20,4 +20,3 @@ jobs:
           github_token: ${{ secrets.GH_TOKEN }}
           copy_requested_reviewers: true
           experimental: '{"conflict_resolution": "draft_commit_conflicts"}'
-
